@@ -9,6 +9,7 @@ namespace BlogOdevMVC.Controllers
         public IActionResult Index()
         {
             var posts = new List<Post>();
+
             using StreamReader reader = new StreamReader("AppData/Posts/index.txt");
             var postsTxt = reader.ReadToEnd();
             var postsLines = postsTxt.Split('\n');
