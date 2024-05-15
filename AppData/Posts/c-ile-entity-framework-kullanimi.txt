@@ -1,0 +1,28 @@
+<article>
+        <h1>C# ile Entity Framework Kullanımı</h1>
+        <p>Entity Framework (EF), Microsoft tarafından geliştirilen ve ORM (Object-Relational Mapping) olarak kullanılan güçlü bir araçtır. C# ile birlikte kullanıldığında, veritabanı işlemlerini çok daha kolay ve verimli hale getirir.</p>
+        <h2>1. ORM Nedir?</h2>
+        <p>ORM, veritabanı tablolarını nesnelerle eşleştirerek, veritabanı işlemlerini nesne yönelimli programlama paradigması ile yönetmenizi sağlar. Bu, SQL sorguları yazmadan veritabanı ile etkileşime geçmenize olanak tanır.</p>
+        <h2>2. Entity Framework'ün Avantajları</h2>
+        <p>Entity Framework, veritabanı yönetimini kolaylaştırır ve kodunuzu daha okunabilir hale getirir. Veritabanı migrasyonları, değişikliklerin kolayca yönetilmesini sağlar. Ayrıca, veritabanı bağımsızlığı sunarak farklı veritabanları arasında geçiş yapmayı mümkün kılar.</p>
+        <h2>3. Kod İlk Yaklaşımı (Code First Approach)</h2>
+        <p>Entity Framework, Kod İlk Yaklaşımı ile veritabanı şemasını C# sınıflarından oluşturmanıza olanak tanır. Bu yöntem, özellikle projeye yeni başlayanlar için hızlı bir başlangıç sağlar.</p>
+        <pre>
+<code>
+public class Product
+{
+    public int ProductId { get; set; }
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+}
+
+public class AppDbContext : DbContext
+{
+    public DbSet&lt;Product&gt; Products { get; set; }
+}
+</code>
+        </pre>
+        <h2>4. Veritabanı İşlemleri</h2>
+        <p>Entity Framework ile CRUD (Create, Read, Update, Delete) işlemlerini kolayca gerçekleştirebilirsiniz. Bu, uygulamanızın veritabanı ile hızlı ve verimli bir şekilde etkileşime girmesini sağlar.</p>
+        <p>Entity Framework, C# ile veritabanı işlemlerini yönetmek için güçlü ve etkili bir araçtır. Projelerinizde bu aracı kullanarak daha temiz ve sürdürülebilir kod yazabilirsiniz.</p>
+    </article>
